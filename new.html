@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>new</title>
+
+	
+	
+</head>
+<body>
+<canvas id="game" width="1000px"; height="500px"; style="border:1px solid grey;background-color:purple;"> <img id="img" src="Capture.PNG" > <img id="arr" src="ball1.png" style="width: 20px;height: 20px;"> <img src="ball2.png" id="ball2">
+<img src="ball4.png" id="ball3"> <img src="ball3.png" id="balll4"></canvas> 
+<!-- <script>
+var c = document.getElementById("game");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(95,50,40,0,2*Math.PI);
+ctx.stroke();
+</script>  -->
+
+
+</body>
+<script>
+	xpos=400;
+	ypos=325;
+	x=0;
+	y=0;
+	b2x=120;
+	b2y=0;
+	b3x=260;
+	b3y=0;
+	b4x=400;
+	b4y=0;
+    
+       
+		// var canvas=document.getElementById('game');
+		// var pencil=canvas.getContext('2d');
+		//     pencil.beginPath();
+		//     pencil.arc(xpos,ypos,40,0,2*Math.PI);
+		//     pencil.stroke();
+		//     pencil.fill();
+
+         // var line;
+         window.onload=function(){
+         	var canvas = document.getElementById('game');
+         	var ctx = canvas.getContext('2d');
+         	var img =document.getElementById('img');
+         	var img2 =document.getElementById('arr');
+         	 var img3 =document.getElementById('ball2');
+         	 var img4 =document.getElementById('ball3')
+         	 var img1 =document.getElementById('ball4')
+         	// ctx.drawImage(img,xpos,ypos);
+         	//  ctx.drawImage(img2,x,y,);
+         	// ctx.drawImage(img3,b2x,b2y);
+          //   ctx.drawImage(img4,b3x,b3y)
+          
+         	setInterval(taiwo,100);
+       		function taiwo(){
+       		canvas.height=canvas.height;
+       		ctx.drawImage(img,xpos,ypos);
+       		ctx.drawImage(img2,x,y);
+       		ctx.drawImage(img3,b2x,b2y);
+       		ctx.drawImage(img4,b3x,b3y)
+       		y+=5;
+       		b2y+=4;
+       		b3y+=3
+      
+       		if (y>=500) {
+                y=-500; 
+		 	}
+		 	if (b2y>=500) {
+		 		b2y=-500;
+		 	}
+		 	}
+       		} 
+       		
+       	
+         		
+        
+          // function clearImage(){
+          // 	// ctx.clearImage(img2,x,y);
+          // ctx.ClearImage(img,xpos,ypos);
+          // 	ctx.drawImage(img3,b2x,b2y);
+          // 	ctx.drawImage(img2,x,y);	
+          // }
+
+		 onkeydown=function move(event) {
+		if (xpos >= 877) {
+			xpos=877;
+			// ctx.drawImage(img,xpos,ypos);
+		
+		}
+			if(xpos <= 0.5){
+				xpos=0.5;
+			// ctx.drawImage(img,xpos,ypos);
+			}
+		// alert(event.keyCode) 
+		// console.log(mo.keyCode)
+	
+		if (event.keyCode=="37"){
+			// alert('am here')
+			xpos -=5;
+	    	canvas.width=canvas.width;
+			ctx.drawImage(img,xpos,ypos);
+	    	 ctx.drawImage(img2,x,y);
+	    	 ctx.drawImage(img3,b2x,b2y);
+	    	   ctx.drawImage(img4,b3x,b3y)
+	    	
+	
+		}
+			if (event.keyCode=="39"){
+			// alert('am here')
+			xpos +=5;
+	    	canvas.width=canvas.width;
+			ctx.drawImage(img,xpos,ypos);
+	    	 ctx.drawImage(img2,x,y);
+	    	 ctx.drawImage(img3,b2x,b2y);
+	    	   ctx.drawImage(img4,b3x,b3y)
+	    	
+		}
+		// 	if (event.keyCode=="38"){
+		// 	// alert('am here')
+		// 	ypos -=5;
+	 //    	canvas.width=canvas.width;
+	 //    	ctx.drawImage(img,xpos,ypos);
+	
+		// }
+		// 	if (event.keyCode=="40"){
+		// 	// alert('am here')
+		// 	ypos +=5;
+	 //    	canvas.width=canvas.width;
+	 //    	ctx.drawImage(img,xpos,ypos);
+	
+		// }
+
+
+
+
+	}
+	// document.onkeydown=move;
+  
+	</script>
+</html>
